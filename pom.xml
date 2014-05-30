@@ -142,13 +142,13 @@
 		</dependency>
 		<!-- servlet-api start -->
 
-		<!-- ojdbc6 start -->
+		<!-- ojdbc6 start
 		<dependency>
 			<groupId>com.oracle</groupId>
 			<artifactId>ojdbc6</artifactId>
 			<version>${ojdbc6.version}</version>
 		</dependency>
-		<!-- ojdbc6 end -->
+		ojdbc6 end -->
 		
 		<!-- mysql-driver start -->
 		<dependency>
