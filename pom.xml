@@ -19,6 +19,7 @@
 		<commons-io.version>2.4</commons-io.version>
 		<dom4j.version>1.6.1</dom4j.version>
 		<ojdbc6.version>11.2.0.4</ojdbc6.version>
+		<mysql-connector-java.version>5.1.30</mysql-connector-java.version>
 		<servlet-api.version>3.0-alpha-1</servlet-api.version>
 	</properties>
 
@@ -125,14 +126,6 @@
 		</dependency>
 		<!-- dom4j end -->
 
-		<!-- ojdbc6 start -->
-		<dependency>
-			<groupId>com.oracle</groupId>
-			<artifactId>ojdbc6</artifactId>
-			<version>${ojdbc6.version}</version>
-		</dependency>
-		<!-- ojdbc6 end -->
-
 		<!-- log4j start -->
 		<dependency>
 			<groupId>log4j</groupId>
@@ -148,6 +141,22 @@
 			<version>${servlet-api.version}</version>
 		</dependency>
 		<!-- servlet-api start -->
+
+		<!-- ojdbc6 start -->
+		<dependency>
+			<groupId>com.oracle</groupId>
+			<artifactId>ojdbc6</artifactId>
+			<version>${ojdbc6.version}</version>
+		</dependency>
+		<!-- ojdbc6 end -->
+		
+		<!-- mysql-driver start -->
+		<dependency>
+		    <groupId>mysql</groupId>
+		    <artifactId>mysql-connector-java</artifactId>
+		    <version>${mysql-connector-java.version}</version>
+		</dependency>
+		<!-- mysql-driver end -->
 
 		<!-- junit start -->
 		<dependency>
