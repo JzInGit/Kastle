@@ -1,16 +1,25 @@
 package com.klein.service.impl;
 
-import org.springframework.beans.factory.annotation.Autowired;
+import javax.annotation.Resource;
+
 import org.springframework.stereotype.Service;
 
+import com.klein.entity.User;
 import com.klein.mapper.UserMapper;
 import com.klein.service.IUserService;
 
-@Service
+@Service("userService")
 public class UserService implements IUserService
 {
 
-    @Autowired
+    @Resource
     private UserMapper userMapper;
-    
+
+    @Override
+    public User getUserByName(String username)
+    {
+        User user = userMapper.getUserByName(username);
+        return user;
+    }
+
 }

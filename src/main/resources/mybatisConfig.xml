@@ -3,11 +3,10 @@
 <configuration>
 
 	<typeAliases>
-		<typeAlias alias="User" type="com.klein.module.entity.User" />
+		<typeAlias alias="User" type="com.klein.entity.User" />
 	</typeAliases>
 
 	<mappers>
-		<mapper resource="com/klein/mapper/UserMapper.xml" />
 	</mappers>
 
 </configuration>

@@ -3,7 +3,7 @@
 	xmlns="http://java.sun.com/xml/ns/javaee"
 	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
 	id="WebApp_ID" version="3.0">
-	<display-name>Kastle</display-name>
+	<display-name>kastle</display-name>
 
 	<!-- Creates the Spring Container shared by all Servlets and Filters -->
 	<listener>
@@ -12,7 +12,7 @@
 
 	<context-param>
 		<param-name>contextConfigLocation</param-name>
-		<param-value>classpath*:/applicationContext.xml</param-value>
+		<param-value>classpath:applicationContext.xml</param-value>
 	</context-param>
 
 	<!-- Processes application requests -->
@@ -26,6 +26,15 @@
 		<servlet-name>springMVC</servlet-name>
 		<url-pattern>/</url-pattern>
 	</servlet-mapping>
+
+	<filter>
+		<filter-name>CharacterEncodingFilter</filter-name>
+		<filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
+		<init-param>
+			<param-name>encoding</param-name>
+			<param-value>utf-8</param-value>
+		</init-param>
+	</filter>
 
 	<welcome-file-list>
 		<welcome-file>index.jsp</welcome-file>
