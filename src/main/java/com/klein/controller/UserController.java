@@ -1,9 +1,12 @@
 package com.klein.controller;
 
+import javax.servlet.http.HttpServletRequest;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.klein.entity.User;
 import com.klein.exception.OKUtilException;
@@ -41,7 +44,8 @@ public class UserController
 
     @RequestMapping(value = "/login",
                     method = RequestMethod.POST)
-    public String userLogin(String username, String password)
+    public String userLogin(@RequestParam(value = "username") String username,
+            @RequestParam(value = "password") String password, HttpServletRequest request)
     {
         User user = userService.getUserByName(username);
         boolean valid = false;
