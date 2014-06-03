@@ -4,21 +4,21 @@ import javax.annotation.Resource;
 
 import org.springframework.stereotype.Service;
 
+import com.klein.dao.IUserDao;
 import com.klein.entity.User;
-import com.klein.mapper.UserMapper;
 import com.klein.service.IUserService;
 
-@Service("userService")
+@Service
 public class UserService implements IUserService
 {
 
     @Resource
-    private UserMapper userMapper;
+    private IUserDao userDao;
 
     @Override
     public User getUserByName(String username)
     {
-        User user = userMapper.getUserByName(username);
+        User user = userDao.getUserByName(username);
         return user;
     }
 

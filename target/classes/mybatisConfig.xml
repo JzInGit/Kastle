@@ -6,7 +6,4 @@
 		<typeAlias alias="User" type="com.klein.entity.User" />
 	</typeAliases>
 
-	<mappers>
-	</mappers>
-
 </configuration>

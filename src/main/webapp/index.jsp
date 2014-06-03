@@ -7,6 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-<a href="userLogin/vaildation"><h2>Hello World</h2></a>
+<a href="/userLogin/vaildation"><h2>Hello World</h2></a>
 </body>
 </html>
