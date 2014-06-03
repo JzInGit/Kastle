@@ -7,8 +7,24 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<h2>
-		<a href="/userLogin/vaildation">Hello World</a>
-	</h2>
+	<h2>Hello World</h2>
+	<form action="/user/login" method="post">
+		<table>
+			<tr>
+				<td>User name:</td>
+				<td><input type="text" name="username" /></td>
+			</tr>
+			<tr>
+				<td>Password:</td>
+				<td><input type="password" name="password" /></td>
+			</tr>
+			<tr>
+				<td colspan="2">
+					<input type="submit" value="Login" />
+					<input type="button" value="Register" />
+				</td>
+			</tr>
+		</table>
+	</form>
 </body>
 </html>

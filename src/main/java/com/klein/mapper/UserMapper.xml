@@ -8,7 +8,7 @@
 		<result property="password" column="password" jdbcType="VARCHAR" />
 	</resultMap>
 
-	<insert id="insertUser" parameterType="User">
+	<insert id="addUser" parameterType="User">
 		INSERT INTO T_USER(USERNAME,
 		PASSWORD) VALUES(#{username}, #{password})
 	</insert>

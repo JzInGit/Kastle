@@ -21,4 +21,11 @@ public class UserDao implements IUserDao
         return user;
     }
 
+    @Override
+    public void addUser(User user)
+    {
+        userMapper.addUser(user);
+
+    }
+
 }

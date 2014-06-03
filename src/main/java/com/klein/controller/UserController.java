@@ -3,24 +3,60 @@ package com.klein.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.klein.entity.User;
+import com.klein.exception.OKUtilException;
 import com.klein.service.IUserService;
+import com.klein.utils.CipherUtil;
 
 @Controller
-@RequestMapping("/userLogin")
+@RequestMapping("/user")
 public class UserController
 {
 
     @Autowired(required = true)
     private IUserService userService;
 
-    @RequestMapping("/vaildation")
+    @RequestMapping(value = "/register",
+                    method = RequestMethod.POST)
+    public String userRegister(String username, String password)
+    {
+        String ciphertext = null;
+        try
+        {
+            ciphertext = CipherUtil.generatePwd(password);
+        }
+        catch (OKUtilException e)
+        {
+            return "";
+        }
+        User user = new User();
+        user.setUsername(username);
+        user.setPassword(ciphertext);
+        userService.addUser(user);
+
+        return "";
+    }
+
+    @RequestMapping(value = "/login",
+                    method = RequestMethod.POST)
     public String userLogin(String username, String password)
     {
-        User user = userService.getUserByName("owen");
-        System.out.println("Hi, my name is " + user.getUsername());
-        System.out.println("Hi, my password is " + user.getPassword());
-        return null;
+        User user = userService.getUserByName(username);
+        boolean valid = false;
+        try
+        {
+            valid = CipherUtil.validatePwd(user.getPassword(), password);
+        }
+        catch (OKUtilException e)
+        {
+            return "";
+        }
+        if (valid)
+        {
+            return "redirect:/user/logined";
+        }
+        return "";
     }
 }
