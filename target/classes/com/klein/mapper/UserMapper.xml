@@ -2,6 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.klein.mapper.UserMapper">
 
+<<<<<<< HEAD
 	<resultMap type="com.klein.entity.User" id="userResult">
 		<id property="id" column="userid" jdbcType="INTEGER" />
 		<result property="username" column="username" jdbcType="VARCHAR" />
@@ -10,10 +11,15 @@
 
 	<insert id="insertUser" parameterType="User">
 		INSERT INTO T_USER(USERNAME,
+=======
+	<insert id="insertUser" parameterType="User">
+		INSERT INTO USER(USERNAME,
+>>>>>>> c1b52f9047e2f59f59724ab82f52a1d191a64f01
 		PASSWORD) VALUES(#{username}, #{password})
 	</insert>
 
 	<update id="updateUser" parameterType="User">
+<<<<<<< HEAD
 		UPDATE T_USER SET
 		USERNAME=#{username}, PASSWORD=#{password} WHERE USERID = #{id}
 	</update>
@@ -25,5 +31,18 @@
 
 	<select id="getUserByName" parameterType="String" resultMap="userResult">
 		SELECT * FROM T_USER WHERE USERNAME=#{username}
+=======
+		UPDATE USER SET
+		USERNAME=#{username}, PASSWORD=#{password} WHERE ID = #{id}
+	</update>
+
+	<select id="getUser" parameterType="User" resultType="User">
+		SELECT *
+		FROM USER WHERE ID=#{id}
+	</select>
+
+	<select id="getUserByName" parameterType="String" resultType="User">
+		SELECT * FROM USER WHERE USERNAME=#{username}
+>>>>>>> c1b52f9047e2f59f59724ab82f52a1d191a64f01
 	</select>
 </mapper>
