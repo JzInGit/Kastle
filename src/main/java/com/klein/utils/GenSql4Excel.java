@@ -27,7 +27,7 @@ public class GenSql4Excel
     {
         try
         {
-            Workbook wb = WorkbookFactory.create(new File("D:/xpads.xlsx"));
+            Workbook wb = WorkbookFactory.create(new File("D:/xpads.xlsx"));    //  Input file location
             Sheet sheet = wb.getSheetAt(1);
 
             for (Cell cell : sheet.getRow(0))
@@ -70,14 +70,14 @@ public class GenSql4Excel
 
             }
 
-            File sqlScript = new File("D:/generateSQL4ODSCURR.sql");
+            File sqlScript = new File("D:/ITG.sql");   //  Output file name
             FileWriter fw = new FileWriter(sqlScript);
 
             for (Map.Entry<String, List<String>> entry : tables.entrySet())
             {
                 fw.write("--  Table " + entry.getKey() + " columns total: "
-                        + entry.getValue().size() + "\n");
-                fw.write("Create table XS_" + entry.getKey().replace(" ", "") + "_CURR\n(\n");
+                        + entry.getValue().size() + ", name length: " + entry.getKey().length() + "\n");
+                fw.write("Create table " + entry.getKey().replace(" ", "") + "\n(\n");    //  table info
                 for (int i = 0; i < entry.getValue().size(); i++)
                 {
                     fw.write("  " + entry.getValue().get(i) + ",\n");
