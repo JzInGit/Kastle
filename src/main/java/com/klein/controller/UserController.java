@@ -24,6 +24,12 @@ public class UserController
     @Autowired
     private IUserService userService;
 
+    @RequestMapping(value = "/index")
+    public String gotoIndex()
+    {
+        return "../index";
+    }
+
     @RequestMapping(value = "/register",
                     method = RequestMethod.POST)
     public String userRegister(String username, String password)
