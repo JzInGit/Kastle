@@ -9,8 +9,10 @@
 	</resultMap>
 
 	<insert id="addUser" parameterType="User">
-		INSERT INTO T_USER(USERNAME,
-		PASSWORD) VALUES(#{username}, #{password})
+		INSERT INTO T_USER(ID,
+		USERNAME,
+		PASSWORD) VALUES(AUTO_USERID.NEXTVAL, #{username},
+		#{password})
 	</insert>
 
 	<update id="updateUser" parameterType="User">

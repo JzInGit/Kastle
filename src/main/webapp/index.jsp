@@ -7,24 +7,24 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<h2>Hello World</h2>
-	<form action="/user/login" method="post">
-		<table>
-			<tr>
-				<td>User name:</td>
-				<td><input type="text" name="username" /></td>
-			</tr>
-			<tr>
-				<td>Password:</td>
-				<td><input type="password" name="password" /></td>
-			</tr>
-			<tr>
-				<td colspan="2">
+	<table>
+		<tr>
+			<td>
+				<form action="/user/login" method="post">
+					<span>Username:</span><input type="text" name="username" /><br/>
+					<span>Password:</span><input type="password" name="password" /><br/>
 					<input type="submit" value="Login" />
-					<input type="button" value="Register" />
-				</td>
-			</tr>
-		</table>
-	</form>
+				</form>
+			</td>
+			<td>
+				<form action="/user/register" method="post">
+					<span>Username:</span><input type="text" name="username" /><br/>
+					<span>Password:</span><input type="password" name="password" /><br/>
+					<input type="submit" value="Register" />
+				</form>
+			</td>
+		</tr>
+	</table>
+
 </body>
 </html>

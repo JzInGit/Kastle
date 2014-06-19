@@ -18,7 +18,7 @@ import com.klein.utils.CipherUtil;
 public class UserController
 {
 
-    @Autowired(required = true)
+    @Autowired
     private IUserService userService;
 
     @RequestMapping(value = "/register",
@@ -39,7 +39,7 @@ public class UserController
         user.setPassword(ciphertext);
         userService.addUser(user);
 
-        return "";
+        return "home";
     }
 
     @RequestMapping(value = "/login",
@@ -61,6 +61,6 @@ public class UserController
         {
             return "redirect:/user/logined";
         }
-        return "";
+        return "home";
     }
 }

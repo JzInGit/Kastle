@@ -150,12 +150,12 @@
 			<version>${ojdbc6.version}</version>
 		</dependency>
 		<!-- ojdbc6 end -->
-		
+
 		<!-- mysql-driver start -->
 		<dependency>
-		    <groupId>mysql</groupId>
-		    <artifactId>mysql-connector-java</artifactId>
-		    <version>${mysql-connector-java.version}</version>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>${mysql-connector-java.version}</version>
 		</dependency>
 		<!-- mysql-driver end -->
 
@@ -167,7 +167,7 @@
 			<scope>test</scope>
 		</dependency>
 		<!-- junit end -->
-		
+
 		<!-- poi start -->
 		<dependency>
 			<groupId>org.apache.poi</groupId>
@@ -175,7 +175,7 @@
 			<version>${poi.version}</version>
 		</dependency>
 		<!-- poi end -->
-		
+
 		<!-- poi-ooxml start -->
 		<dependency>
 			<groupId>org.apache.poi</groupId>
@@ -184,6 +184,17 @@
 		</dependency>
 		<!-- poi-ooxml end -->
 
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>jstl</artifactId>
+			<version>1.2</version>
+		</dependency>
+
+		<dependency>
+			<groupId>taglibs</groupId>
+			<artifactId>standard</artifactId>
+			<version>1.1.2</version>
+		</dependency>
 	</dependencies>
 
 	<build>
