@@ -42,6 +42,8 @@
 
 	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
 		<property name="basePackage" value="com.klein.mapper" />
+		<!-- <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory" 
+			/> -->
 	</bean>
 
 </beans>

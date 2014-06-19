@@ -1,31 +1,31 @@
 package com.klein.service.impl;
 
-import javax.annotation.Resource;
-
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
-import com.klein.dao.IUserDao;
 import com.klein.entity.User;
+import com.klein.mapper.UserMapper;
 import com.klein.service.IUserService;
 
 @Service
 public class UserService implements IUserService
 {
 
-    @Resource
-    private IUserDao userDao;
+    @Autowired
+    private UserMapper userMapper;
 
-    @Override
+    @Transactional
     public User getUserByName(String username)
     {
-        User user = userDao.getUserByName(username);
+        User user = userMapper.getUserByName(username);
         return user;
     }
 
-    @Override
+    @Transactional
     public void addUser(User user)
     {
-        userDao.addUser(user);
+        userMapper.addUser(user);
     }
 
 }
