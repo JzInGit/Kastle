@@ -1,7 +1,6 @@
 package com.klein.utils;
 
 import java.io.File;
-import java.io.FileOutputStream;
 import java.io.FileWriter;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -54,13 +53,16 @@ public class GenSql4Excel
                 if (!tableNames.isEmpty() && tableNames.contains(tableNameTemp))
                 {
                     tables.get(tableNameTemp).add(
-                            row.getCell(COLNAME_INDEX).getStringCellValue().replace(" ", "") + " "
-                                    + row.getCell(COLTYPE_INDEX).getStringCellValue().replace(" ", ""));
+                            row.getCell(COLNAME_INDEX).getStringCellValue().replace(" ", "")
+                                    + " "
+                                    + row.getCell(COLTYPE_INDEX).getStringCellValue()
+                                            .replace(" ", ""));
                 }
                 else
                 {
                     List<String> columns = new ArrayList<String>();
-                    columns.add(row.getCell(COLNAME_INDEX).getStringCellValue().replace(" ", "") + " "
+                    columns.add(row.getCell(COLNAME_INDEX).getStringCellValue().replace(" ", "")
+                            + " "
                             + row.getCell(COLTYPE_INDEX).getStringCellValue().replace(" ", ""));
                     tables.put(tableNameTemp, columns);
                     tableNames.add(tableNameTemp);
