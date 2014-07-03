@@ -2,12 +2,15 @@ package com.unassigned;
 
 public enum Fruit
 {
-    APPLE(101, "China", "I'm a Chinese apple"), BANANA(102, "India", "I'm a Indian banana"), PEAR(
-            103, "Australia", "I'm a Australian pear"), WATERMELON(104, "India",
-            "I'm a Indian watermelon"), PINEAPPLE(105, "Taiwan", "I'm a Taiwan pineapple"), GRAPE(
-            106, "Taiwan", "I'm a Taiwan grape");
+    APPLE(101, "China", "I'm a Chinese apple"),
+    BANANA(102, "India", "I'm a Indian banana"),
+    PEAR(103, "Australia", "I'm a Australian pear"),
+    WATERMELON(104, "India", "I'm a Indian watermelon"),
+    PINEAPPLE(105, "Taiwan", "I'm a Taiwan pineapple"),
+    GRAPE(106, "Taiwan", "I'm a Taiwan grape");
 
     private int id;
+    @SuppressWarnings("unused")
     private String From;
     private String Msg;
 
