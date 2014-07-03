@@ -9,7 +9,7 @@ public class OKUtilException extends Exception
     {
         super();
     }
-    
+
     public OKUtilException(String errorMsg)
     {
         super(errorMsg);

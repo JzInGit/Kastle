@@ -11,12 +11,14 @@ public class CipherUtil
     private final static String[] HEXDIGITS = { "0", "1", "2", "3", "4", "5", "6", "7", "8", "9",
             "a", "b", "c", "d", "e", "f" };
 
-    public static String generatePwd(String cleartext) throws OKUtilException
+    public static String generatePwd(String cleartext)
+            throws OKUtilException
     {
         return encodeByMD5(cleartext);
     }
 
-    public static boolean validatePwd(String ciphertext, String cleartext) throws OKUtilException
+    public static boolean validatePwd(String ciphertext, String cleartext)
+            throws OKUtilException
     {
         if (ciphertext.equals(encodeByMD5(cleartext)))
         {
@@ -25,7 +27,8 @@ public class CipherUtil
         return false;
     }
 
-    private static String encodeByMD5(String cleartext) throws OKUtilException
+    private static String encodeByMD5(String cleartext)
+            throws OKUtilException
     {
         if (cleartext != null)
         {
@@ -67,7 +70,8 @@ public class CipherUtil
         return HEXDIGITS[d1] + HEXDIGITS[d2];
     }
 
-    public static void main(String[] args) throws OKUtilException
+    public static void main(String[] args)
+            throws OKUtilException
     {
         System.out.println(generatePwd("owen"));
         System.out.println(validatePwd("43996FB100428B0D99E233C3261F7187", "owen"));

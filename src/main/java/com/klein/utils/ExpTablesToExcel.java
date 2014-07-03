@@ -21,7 +21,8 @@ public class ExpTablesToExcel
 
     ResultSet resultSet = null;
 
-    public static void connectToOracle() throws ClassNotFoundException
+    public static void connectToOracle()
+            throws ClassNotFoundException
     {
         Class.forName(driver);
     }
