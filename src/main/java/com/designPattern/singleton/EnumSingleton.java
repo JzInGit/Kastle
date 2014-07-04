@@ -6,7 +6,7 @@ public enum EnumSingleton
 
     EnumSingleton()
     {
-        System.out.println("I'm instantiate myself.");
+        System.out.println("I'm instantiating myself.");
     }
 
     public void getInstanceInfo()
