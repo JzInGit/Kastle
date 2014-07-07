@@ -1,9 +1,10 @@
-package com.designPattern.test;
+package com.designPattern;
 
-import com.designPattern.observer.Policeman;
-import com.designPattern.observer.Suspect;
+import com.designPattern.behavioral.observer.Policeman;
+import com.designPattern.behavioral.observer.Suspect;
 
-public class TestObserver
+
+public class Test_Observer
 {
 
     public static void main(String[] args)

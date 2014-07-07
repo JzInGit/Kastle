@@ -1,4 +1,4 @@
-package com.designPattern.factoryMethod;
+package com.designPattern.creational.factoryMethod;
 
 public interface PhoneCreater
 {

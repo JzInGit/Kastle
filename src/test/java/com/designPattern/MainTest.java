@@ -1,6 +1,6 @@
-package com.designPattern.test;
+package com.designPattern;
 
-import com.designPattern.factoryMethod.impl.AppleCreate;
+import com.designPattern.creational.factoryMethod.AppleCreate;
 
 public class MainTest
 {

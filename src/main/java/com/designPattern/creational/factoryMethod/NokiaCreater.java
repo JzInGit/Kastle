@@ -1,6 +1,6 @@
-package com.designPattern.factoryMethod.impl;
+package com.designPattern.creational.factoryMethod;
 
-import com.designPattern.factoryMethod.PhoneCreater;
+import com.designPattern.creational.factoryMethod.PhoneCreater;
 
 public class NokiaCreater implements PhoneCreater
 {

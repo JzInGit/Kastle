@@ -1,8 +1,9 @@
-package com.designPattern.test;
+package com.designPattern;
 
-import com.designPattern.singleton.EnumSingleton;
+import com.designPattern.creational.singleton.EnumSingleton;
 
-public class TestSingleton
+
+public class Test_Singleton
 {
     public static void main(String[] args)
     {
