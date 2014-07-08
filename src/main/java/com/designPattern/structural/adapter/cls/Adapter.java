@@ -1,6 +1,6 @@
 package com.designPattern.structural.adapter.cls;
 
-public class Adapter extends Source implements Targetable
+public class Adapter extends Source implements ITargetable
 {
 
     @Override
