@@ -7,7 +7,8 @@ import com.designPattern.behavioral.command.Receiver;
 
 public class Test_Command
 {
-    public static void main(String[] args) throws ClassNotFoundException
+    public static void main(String[] args)
+            throws ClassNotFoundException
     {
         Receiver receiver = new Receiver();
         ICommand command = new CreateCommand(receiver);
@@ -16,8 +17,6 @@ public class Test_Command
         invoker.setCommand(command);
         receiver.action();
         receiver.undo();
-        
-        Class clazz = Class.forName("java.lang.String");
-        System.out.println(clazz.getDeclaredConstructors());
+
     }
 }
