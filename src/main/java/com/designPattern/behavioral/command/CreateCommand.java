@@ -1,5 +1,6 @@
 package com.designPattern.behavioral.command;
 
+
 public class CreateCommand implements ICommand
 {
 
