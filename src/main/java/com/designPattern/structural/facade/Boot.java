@@ -1,6 +1,5 @@
 package com.designPattern.structural.facade;
 
-
 public class Boot
 {
     private CPU cpu;

@@ -5,12 +5,7 @@ public class Invoker
 
     private ICommand command;
 
-    public ICommand getCommand()
-    {
-        return command;
-    }
-
-    public void setCommand(ICommand command)
+    public Invoker(ICommand command)
     {
         this.command = command;
     }

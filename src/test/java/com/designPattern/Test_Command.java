@@ -11,10 +11,9 @@ public class Test_Command
     {
         Receiver receiver = new Receiver();
         ICommand command = new CreateCommand(receiver);
-        Invoker invoker = new Invoker();
+        Invoker invoker = new Invoker(command);
 
-        invoker.setCommand(command);
-        receiver.action();
-        receiver.undo();
+        invoker.runCommand();
+        invoker.undoCommand();
     }
 }
