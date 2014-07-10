@@ -2,7 +2,6 @@ package com.designPattern;
 
 import com.designPattern.creational.singleton.EnumSingleton;
 
-
 public class Test_Singleton
 {
     public static void main(String[] args)

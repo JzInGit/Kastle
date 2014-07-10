@@ -1,11 +1,11 @@
 package com.designPattern.structural.decorator;
 
-public class Decorator implements IDecorator
+public abstract class DecoratorAt implements IDecorator
 {
 
     private Source source;
 
-    public Decorator(Source source)
+    public DecoratorAt(Source source)
     {
         this.source = source;
     }
@@ -13,9 +13,7 @@ public class Decorator implements IDecorator
     @Override
     public void method()
     {
-        System.out.println("Before processing.");
         source.method();
-        System.out.println("After processing.");
     }
 
 }

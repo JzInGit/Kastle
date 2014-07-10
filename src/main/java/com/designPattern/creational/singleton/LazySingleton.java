@@ -9,7 +9,7 @@ public class LazySingleton
         System.out.println("Instantiate the Lazy-singleton.");
     }
 
-    public static synchronized LazySingleton getInstance()
+    public static LazySingleton getInstance()
     {
         if (instance == null)
         {
